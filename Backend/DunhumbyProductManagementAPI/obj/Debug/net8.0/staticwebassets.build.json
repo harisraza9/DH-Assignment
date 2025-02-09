@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "nhgZbVIuB1zvVWDobeu0knGgyMARk+YTQAEq+PC2EI4=",
+  "Source": "DunhumbyProductManagementAPI",
+  "BasePath": "_content/DunhumbyProductManagementAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

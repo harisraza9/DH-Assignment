@@ -1,0 +1,52 @@
+/* Grid layout for charts */
+.chart-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto; /* Center the chart */
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: #f4f4f4;
+}
+
+.data-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Table and chart layout */
+.data-table-container {
+  margin-bottom: 40px;
+}

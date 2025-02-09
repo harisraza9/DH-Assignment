@@ -1,0 +1,32 @@
+﻿version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dunhumby-product-api
+    ports:
+      - "5000:80" # Map the container's port 80 to the host's port 5000
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=ProductApiDb;User=sa;Password=YourStrong@Password;
+    depends_on:
+      - db
+    networks:
+      - dunhumby-network
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sql-server-container
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrong@Password"
+    ports:
+      - "1433:1433" # Expose SQL Server on the default port
+    networks:
+      - dunhumby-network
+
+networks:
+  dunhumby-network:
+    driver: bridge
